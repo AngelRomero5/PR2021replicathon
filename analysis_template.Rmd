@@ -1,5 +1,5 @@
 ---
-title: "Insert your team name here"
+title: Team What The Fork
 date: Replicathon 2021
 author: Team members names
 output:
@@ -75,9 +75,40 @@ Each team will complete one module. The modules are complementary, so each team 
 
 1. Create a scatterplot for each drug comparing the AUC in GDSC and CCLE for all cell lines (hint: code from Tutorial 1b may help). 
 
+##### **Answer 1: **
+
 2. Calculate the Pearson and Spearman correlation coefficients of the AUC in GDSC and CCLE for each drug (hint: code from Tutorial 1b may help).
 
+##### **Answer 2: **
+
+  **Pearson**
+
+  ```cor(summarizedPharmacoData$auc_CCLE, summarizedPharmacoData$auc_GDSC, method = c("spearman"))```
+
+  Pearson's product-moment correlation
+
+  data:  summarizedPharmacoData$auc_CCLE and summarizedPharmacoData$auc_GDSC
+  t = 45.286, df = 2555, p-value < 2.2e-16
+  alternative hypothesis: true correlation is not equal to 0
+  95 percent confidence interval:
+   0.6452097 0.6882449
+  sample estimates:
+        cor 
+  0.6672839 
+  
+  
+  **Spearman**
+  
+ ```cor(summarizedPharmacoData$auc_CCLE, summarizedPharmacoData$auc_GDSC, method = c("spearman"))```
+  [1] 0.5402717
+  
+  
+
 3. Based on the scatterplot and correlation values for AUC, would you say that GDSC and CCLE tend to agree? Why or why not?
+
+##### **Answer 3: **
+
+  They tend to agree, because the two values are not so far one from another using the same interval of confidence. 
 
 4. Do the Pearson and Spearman correlation coefficients that you calculated differ? Which do you think is a better summary of the consistency between the two studies? 
 
@@ -91,6 +122,11 @@ Each team will complete one module. The modules are complementary, so each team 
     Then, you can compute distance correlation with the `dcor()` function. How does this correlation measure compare to Pearson and Spearman? Do your conclusions about the agreement between the two studies change at all using this measure?
 
 ---
+
+#### Our group question
+
+  * How does the choice of correlation impact the conclusion of whether or not the data is replicable?
+
 
 ### **Module 2:** Comparing AUC and IC50 to Assess Replicability of Drug Response Studies
 

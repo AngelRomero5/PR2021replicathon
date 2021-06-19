@@ -1,8 +1,11 @@
 ---
-title: "Tutorial 1b: Exploring Replicability with the `summarizedPharmacoData` Dataset"
-output: 
+title: 'Tutorial 1b: Exploring Replicability with the `summarizedPharmacoData` Dataset'
+output:
+  html_document:
+    toc: yes
+    df_print: paged
   pdf_document:
-    toc: true
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
